@@ -7,7 +7,7 @@ class Usuario:
         self.email = email
         self.telefono = telefono
         self.__contraseña = contraseña  # Atributo privado
-        self._rol = "usuario"
+        self._rol = rol
 
     def __str__(self):
         return f"Usuario(id={self.id}, nombre={self.nombre}, email={self.email}, telefono={self.telefono}, rol={self._rol})"
