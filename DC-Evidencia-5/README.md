@@ -12,7 +12,6 @@ Con respecto al modelo entidad relacion tuvimos cambios debido a la inconsistenc
 
 ### Diagrama de Clases
 
-![UML-diagrama de clases.png](attachment:a7daa178-3dc2-4ca2-8b92-e8efbcb29c96:UML-diagrama_de_clases.png)
 
 En el diagrama de clases presentado podemos visualizar tres tablas las cuales nos ayudan a conceptualizar, analizar y comunicar la estructura del sistema de manera efecticva 
 
