@@ -30,9 +30,12 @@ def test_agregar_usuario():
     assert usuario.rol == "admin"
 
 
-def test_contraseña():
-    usuario = Usuario(1, "Gadiel", "correo@correo.com", "123546897", "admin")
-    assert usuario.contraseña == usuario.contraseña
+def test_cambiar_contraseña():
+    usuario = Usuario(
+        3, "Gadiel", "correo@correo.com", contraseña="123456789", rol="admin"
+    )
+    usuario.contraseña = "987654321"
+    assert usuario.contraseña == "987654321"
 
 
 # python -m pytest test/test_usuario.py -v
