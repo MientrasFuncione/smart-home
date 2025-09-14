@@ -142,4 +142,8 @@ Permite verificar dispositivo cuyo estado esta en “encendido” cambie a “ap
 
 **ACLARACIÓN GENERAL DE DESARROLLO**
 
+Quisiera aclarar que, durante el desarrollo del proyecto, varios integrantes dejaron de participar, lo que afectó la distribución de tareas y los avances que pudimos lograr.
+
+Aun así, nos aseguramos de avanzar con lo que estuvo a nuestro alcance para cumplir con los objetivos principales.
+
 Nuestro grupo conto de numerosas bajas en el desarrollo y la incorporacion de un nuevo integrante, quedando solamente dos al momento de desarrollar, se hicieron modificaciones con respecto al trabajo anterior (habladas y aprobadas por el equipo)
