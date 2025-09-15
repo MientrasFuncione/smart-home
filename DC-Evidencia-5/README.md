@@ -4,16 +4,17 @@
 
 ### Introducción
 
-A partir de la instancia anterior, donde utilizabamos un programacion estructura, en  esta instancia tenemos como objetivo lograr implementa una Programacion Orientada a Objetos, aplicando los conceptos fundamentales como abstracción, encapsulamiento, herencia, agregación, etc.
+A partir de la instancia anterior, donde utilizabamos un programacion estructura, en esta instancia tenemos como objetivo lograr implementa una Programacion Orientada a Objetos, aplicando los conceptos fundamentales como abstracción, encapsulamiento, herencia, agregación, etc.
 
 Con respecto al modelo entidad relacion tuvimos cambios debido a la inconsistencia del mismo, donde decimos solo implementar las Entidades Usuario, Dispositivo y Automatización.
+
+Para ello decidimos cambiar las automatizacion a Luces Inteligentes, donde podemos agregar luces de diferentes lugares del hogar, donde cada usuario puede tener control de todas las luces y tambien sus respectivas automatizaciones.
 
 ---
 
 ### Diagrama de Clases
 
-
-En el diagrama de clases presentado podemos visualizar tres tablas las cuales nos ayudan a conceptualizar, analizar y comunicar la estructura del sistema de manera efecticva 
+En el diagrama de clases presentado podemos visualizar tres tablas las cuales nos ayudan a conceptualizar, analizar y comunicar la estructura del sistema de manera efecticva
 
 Cabe aclarar que el diagrama de UML puede ser mejorado integrando integrando nuevas tablas como dispositivos especificos como “Luces” donde busquemos un comportamiento diferente al de los demas objetos como un prendido automatico a determinada hora.
 
