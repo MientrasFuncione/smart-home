@@ -1,6 +1,6 @@
 # Modulo Programador - ( Tercera Instancia )
 
-<img width="762" height="538" alt="Image" src="https://github.com/user-attachments/assets/0881eaad-d24d-44c9-80da-11234da90e66" />
+<img width="1407" height="577" alt="Image" src="https://github.com/user-attachments/assets/000557ac-c784-4317-b77c-464db6061359" />
 
 ### Introducción
 
