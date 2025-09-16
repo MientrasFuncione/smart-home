@@ -10,6 +10,8 @@ Con respecto al modelo entidad relacion tuvimos cambios debido a la inconsistenc
 
 Para ello decidimos cambiar las automatizacion a Luces Inteligentes, donde podemos agregar luces de diferentes lugares del hogar, donde cada usuario puede tener control de todas las luces y tambien sus respectivas automatizaciones.
 
+Esta decision viene ya que la nueva implementación, nos permite generar automatizaciones mas generales como la de encender todas las luces cuando el usuario llega a casa, tener diferentes estados (”tenue”, “calida”,”fria”) y mejorar la experiencia de usuario, generando asi metodos de encendido y apagado mas especificos.
+
 ---
 
 ### Diagrama de Clases
