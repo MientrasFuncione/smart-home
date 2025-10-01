@@ -1,8 +1,9 @@
-# Modulo Programador - DDL Y DML
+# Modulo Programador - DDL - DML - CONSULTAS -
 
 ### Introducción
 
 En esta tercera instancia, comenzamos a manipular bases de datos, mediante el lenguaje de consultas denominado SQL. Vamos a crear bases de datos, dentro de ellas tablas y lograremos insertar datos a las mismas, mostrando su funcionamiento con un sentencia SQL basica.
+y no tan basicas, como las UPDATE,( se actualiza el registro) WHERE,(mostrará las filas donde el valor en la columna se igual al qeu solicitamos) BETWEEN(para filtrar rangos numericos) etc.
 
 SQL al ser un lenguaje universal, podemos usar cualquier DBMS Relacional, y las consultas seran las mismas, pero puede cambiar minimamente en algunas caracteristicas. Para esta instancia abordatemos MySQL, donde implementaremos consultas DDL Y DML. Para ello utilizaremos **One Compiler**.
 
@@ -11,6 +12,10 @@ SQL al ser un lenguaje universal, podemos usar cualquier DBMS Relacional, y las 
 ---
 
 ### Ejecución DDL
+- ** Creamos la base de datos primero**
+CREATE DATABASE IF NOT EXISTS casa_inteligente_bd; (si no exite ninguan base de datos con este nombre, que se cree.)
+
+- ** USE casa_inteligente_bd; se pone en uso la base de dato para que dentro de ella se creen las tablas.
 
 - **Crear Tablas**
 
