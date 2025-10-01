@@ -2,41 +2,66 @@ class Usuario:
     def __init__(
         self, id, nombre, email, telefono=None, contraseña=None, rol="usuario"
     ):
-        self.id = id
-        self.nombre = nombre
-        self.email = email
-        self.telefono = telefono
-        self.__contraseña = contraseña  # Atributo privado
-        self._rol = rol
+        self.__id = id
+        self.__nombre = nombre
+        self.__email = email
+        self.__telefono = telefono
+        self.__contraseña = contraseña
+        self.__rol = rol
 
     def __str__(self):
-        return f"Usuario(id={self.id}, nombre={self.nombre}, email={self.email}, telefono={self.telefono}, rol={self._rol})"
+        return f"Usuario(id={self.__id}, nombre={self.__nombre}, email={self.__email}, telefono={self.__telefono}, rol={self.__rol})"
 
-    # getter de la contraseña, mala practica, pero lo pide para armar el setter
+    # id
+    @property
+    def id(self):
+        return self.__id
+
+    @id.setter
+    def id(self, nuevo_id):
+        self.__id = nuevo_id
+
+    # nombre
+    @property
+    def nombre(self):
+        return self.__nombre
+
+    @nombre.setter
+    def nombre(self, nuevo_nombre):
+        if not nuevo_nombre:
+            raise ValueError("El nombre no puede estar vacío.")
+        self.__nombre = nuevo_nombre
+
+    # email
+    @property
+    def email(self):
+        return self.__email
+
+    @email.setter
+    def email(self, nuevo_email):
+        if "@" not in nuevo_email or "." not in nuevo_email:
+            raise ValueError("El email no es válido.")
+        self.__email = nuevo_email
+
+    # telefono
+    @property
+    def telefono(self):
+        return self.__telefono
+
+    @telefono.setter
+    def telefono(self, nuevo_telefono):
+        self.__telefono = nuevo_telefono
+
+    # contraseña
     @property
     def contraseña(self):
         return self.__contraseña
 
-    # setter de la contraseña
     @contraseña.setter
     def contraseña(self, nueva_contraseña):
         if not nueva_contraseña or len(nueva_contraseña) < 4:
             raise ValueError("La contraseña debe tener al menos 4 caracteres.")
-
         self.__contraseña = nueva_contraseña
 
-    # validación de contraseña
     def validar_contraseña(self, contraseña):
         return self.__contraseña == contraseña
-
-    # getter del rol
-    @property
-    def rol(self):
-        return self._rol
-
-    # setter del rol
-    @rol.setter
-    def rol(self, nuevo_rol):
-        if nuevo_rol not in ["usuario", "admin"]:
-            raise ValueError("El rol debe ser 'usuario' o 'admin'.")
-        self._rol = nuevo_rol

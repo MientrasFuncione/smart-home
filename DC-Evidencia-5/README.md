@@ -28,7 +28,7 @@ La automatizacion permite activar automaticamente todos los dispositivos conecta
 
 ### Principios Aplicados
 
-- **Abstraccion**
+- **Agregación**
 
 Una clase es una abstracción de un objeto del mundo real, donde seleccionamos solo lo relevante y ocultamos detalles inncesarios.
 
