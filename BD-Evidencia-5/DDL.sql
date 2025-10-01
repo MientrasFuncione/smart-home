@@ -1,8 +1,3 @@
-CREATE DATABASE IF NOT EXISTS casa_inteligente_bd;
-
-USE casa_inteligente_bd;
-
-
 CREATE TABLE Usuario (
   id_usuario INT primary key not null AUTO_INCREMENT,
   nombre VARCHAR(80) NOT NULL,
@@ -40,4 +35,6 @@ CREATE TABLE DispositivoAutomatizacion(
   foreign key (id_dispositivo) references Dispositivo(id_dispositivo),
   foreign key (id_automatizacion) references Automatizacion(id_automatizacion)
 );
+
+
 
