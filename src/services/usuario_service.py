@@ -56,7 +56,3 @@ if __name__ == "__main__":
     servicio.iniciar_sesion("Gadiel", "123456789")
     # servicio.iniciar_sesion("Gadiel", "12345678") # error
 
-"""
-cd C:/Users/Silva/Desktop/Gadiel/Modulos/POO-SmartHome/src
-python -m services.usuario_service
-"""

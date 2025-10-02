@@ -82,7 +82,4 @@ if __name__ == "__main__":
     servicio.listar_dispositivos()
 
 
-"""
-cd C:/Users/Silva/Desktop/Gadiel/Modulos/dispositivos/src
-python -m services.dispositivo_service
-"""
+

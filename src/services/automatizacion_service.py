@@ -1,4 +1,7 @@
-from app.automatizacion import Automatizacion
+from app.automatizacion import AutomatizacionBase
+
+def nueva_automatizacion(self, id, nombre, descripcion):
+    return AutomatizacionBase(id, nombre.capitalize(), descripcion.capitalize())
 
 
 class AutomatizacionService:
@@ -7,7 +10,7 @@ class AutomatizacionService:
         self.id_contar = 1
 
     def nueva_automatizacion(self, id, nombre, descripcion):
-        nueva_automatizacion = Automatizacion(
+        nueva_automatizacion = AutomatizacionBase(
             id, nombre.capitalize(), descripcion.capitalize()
         )
         return nueva_automatizacion
@@ -52,7 +55,3 @@ if __name__ == "__main__":
         print(f"- {automatizacion.nombre}: {automatizacion.descripcion}")
 
 
-"""
-cd C:/Users/Silva/Desktop/Gadiel/Modulos/dispositivos/src
-python -m services.automatizacion_service
-"""
