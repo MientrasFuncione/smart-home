@@ -15,7 +15,9 @@ def main():
         if accion == "1":
             nombre = input("Ingresar nombre de usuario: ")
             contraseña = input("Ingresar contraseña: ")
+
             usuario_logueado = gestion_usuario.iniciar_sesion(nombre, contraseña)
+
             if usuario_logueado:
                 rol = usuario_logueado.rol
                 if rol == "usuario":
@@ -24,9 +26,7 @@ def main():
                             "Desea consultar datos personales (1), Consultar dispositivos (2) o salir (3) "
                         )
                         if accion == "1":
-                            print(
-                                f"Datos Personales \nNombre: {usuario_logueado.nombre} \nEmail: {usuario_logueado.email} \nTelefono:{usuario_logueado.telefono} \nRol:{usuario_logueado.rol} \n"
-                            )
+                            print(usuario_logueado.mostrar_datos())
                         if accion == "2":
                             gestion_dispositivo.listar_dispositivos(usuario_logueado.id)
 
@@ -35,6 +35,7 @@ def main():
             email = input("Ingresar email: ")
             telefono = input("Ingresar telefono: ")
             contraseña = input("Ingresar contraseña: ")
+
             gestion_usuario.registrar_usuario(nombre, email, telefono, contraseña)
 
         if accion == "3":
