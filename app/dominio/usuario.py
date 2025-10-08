@@ -74,6 +74,3 @@ class Usuario:
         if not nueva_contraseña or len(nueva_contraseña) < 4:
             raise ValueError("La contraseña debe tener al menos 4 caracteres.")
         self.__contraseña = nueva_contraseña
-
-    def validar_contraseña(self, contraseña):
-        return self.__contraseña == contraseña
