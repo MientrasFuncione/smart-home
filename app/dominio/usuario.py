@@ -1,8 +1,5 @@
 class Usuario:
-    def __init__(
-        self, id, nombre, email, telefono=None, contraseña=None, rol="usuario"
-    ):
-        self.__id = id
+    def __init__(self, nombre, email, telefono=None, contraseña=None, rol="usuario"):
         self.__nombre = nombre
         self.__email = email
         self.__telefono = telefono
@@ -20,6 +17,15 @@ class Usuario:
     @id.setter
     def id(self, nuevo_id):
         self.__id = nuevo_id
+
+    # rol
+    @property
+    def rol(self):
+        return self.__rol
+
+    @rol.setter
+    def rol(self, rol):
+        self.__rol = rol
 
     # nombre
     @property
