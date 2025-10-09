@@ -35,14 +35,19 @@ def main():
                             break
                 elif rol == "admin":
                     print("Funcionalidades de admin")
+            else:
+                print("Usuario o contraseña incorrectos.")
 
         if accion == "2":
             nombre = input("Ingresar nombre de usuario: ")
             email = input("Ingresar email: ")
             telefono = input("Ingresar telefono: ")
             contraseña = input("Ingresar contraseña: ")
-
-            gestion_usuario.registrar_usuario(nombre, email, telefono, contraseña)
+            
+            mensaje = gestion_usuario.registrar_usuario(
+                nombre, email, telefono, contraseña
+            )
+            print(mensaje)
 
         if accion == "3":
             break

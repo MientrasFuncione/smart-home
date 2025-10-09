@@ -20,7 +20,6 @@ class UsuarioDAO:
                 )
                 cursor.execute(query, values)
                 self.connection.commit()
-                print("Usuario creado exitosamente.")
             except mysql.connector.Error as err:
                 print(f"Error: {err}")
 
