@@ -2,14 +2,18 @@ from app.dominio.dispositivo import Dispositivo
 
 
 class GestionDispositivo:
-    def __init__(self, dao):
-        self.dao = dao
+    def __init__(self, dispositivo_dao):
+        self.dispositivo_dao = dispositivo_dao
 
-    def agregar_dispositivo(self, nombre, marca, tipo):
-        pass
+    def agregar_dispositivo(self, nombre, marca, tipo, id_usuario):
+        if not nombre or not marca or not tipo:
+            return "El nombre, la marca y el tipo son obligatorios."
+        nuevo_dispositivo = Dispositivo(id, nombre, marca, tipo)
+        self.dispositivo_dao.create_device(nuevo_dispositivo, id_usuario)
+        return "Dispositivo agregado exitosamente."
 
-    def listar_dispositivos_por_usuario(self, usuario_id):
-        dispositivos = self.dao.get_device_by_user(usuario_id)
+    def listar_dispositivos(self):
+        dispositivos = self.dispositivo_dao.get_all()
         for dispositivo in dispositivos:
             print(dispositivo)
 

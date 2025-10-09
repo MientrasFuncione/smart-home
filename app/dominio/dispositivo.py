@@ -54,7 +54,7 @@ class Dispositivo:
         self.__estado = nuevo_estado
 
     def __str__(self):
-        return f"Id: {self.id}, Nombre: {self.nombre}, Marca: {self.marca}, Tipo: {self.tipo}, Estado: {self.estado}"
+        return f"Nombre: {self.nombre}, Marca: {self.marca}, Tipo: {self.tipo}, Estado: {self.estado}"
 
     def encender_dispositivo(self):
         if self.estado == "encendido":

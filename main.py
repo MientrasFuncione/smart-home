@@ -23,18 +23,34 @@ def main():
                 if rol == "usuario":
                     while True:
                         accion = input(
-                            "Desea consultar datos personales (1), Consultar dispositivos (2) o salir (3) "
+                            "Desea consultar datos personales (1), Consultar dispositivos (2) o salir (3)"
                         )
                         if accion == "1":
                             print(usuario_logueado.mostrar_datos())
                         if accion == "2":
-                            gestion_dispositivo.listar_dispositivos_por_usuario(
-                                usuario_logueado.id
-                            )
+                            gestion_dispositivo.listar_dispositivos()
                         if accion == "3":
                             break
                 elif rol == "admin":
-                    print("Funcionalidades de admin")
+                    while True:
+                        accion = input(
+                            "Desea Gestionar dispositivos (1), Modificar rol de un usuario (2) o salir (3)"
+                        )
+                        if accion == "1":
+                            while True:
+                                accion = input(
+                                    "Desea agregar dispositivo (1), listar dispositivos (2), eliminar dispositivo(3), o salir (4):"
+                                )
+                                if accion == "1":
+                                    nombre = input("Ingresar nombre de dispositivo: ")
+                                    marca = input("Ingresar marca del dispositivo: ")
+                                    tipo = input("Ingresar tipo de dispositivo: ")
+                                    mensaje = gestion_dispositivo.agregar_dispositivo(
+                                        nombre, marca, tipo, usuario_logueado.id
+                                    )
+                                    print(mensaje)
+
+                    pass
             else:
                 print("Usuario o contraseña incorrectos.")
 
@@ -43,7 +59,7 @@ def main():
             email = input("Ingresar email: ")
             telefono = input("Ingresar telefono: ")
             contraseña = input("Ingresar contraseña: ")
-            
+
             mensaje = gestion_usuario.registrar_usuario(
                 nombre, email, telefono, contraseña
             )
