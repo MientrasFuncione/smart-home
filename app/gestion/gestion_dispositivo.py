@@ -8,7 +8,7 @@ class GestionDispositivo:
     def agregar_dispositivo(self, nombre, marca, tipo):
         pass
 
-    def listar_dispositivos(self, usuario_id):
+    def listar_dispositivos_por_usuario(self, usuario_id):
         dispositivos = self.dao.get_device_by_user(usuario_id)
         for dispositivo in dispositivos:
             print(dispositivo)

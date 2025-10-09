@@ -28,7 +28,13 @@ def main():
                         if accion == "1":
                             print(usuario_logueado.mostrar_datos())
                         if accion == "2":
-                            gestion_dispositivo.listar_dispositivos(usuario_logueado.id)
+                            gestion_dispositivo.listar_dispositivos_por_usuario(
+                                usuario_logueado.id
+                            )
+                        if accion == "3":
+                            break
+                elif rol == "admin":
+                    print("Funcionalidades de admin")
 
         if accion == "2":
             nombre = input("Ingresar nombre de usuario: ")
