@@ -25,6 +25,3 @@ class GestionUsuario:
             return usuario
 
         return None
-
-    def modificar_rol_usuario(self, nombre):
-        pass

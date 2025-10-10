@@ -1,5 +1,5 @@
 import pytest
-from src.app.dispositivo import Dispositivo
+from app.dominio.dispositivo import Dispositivo
 
 
 def test_crear_dispositivo():

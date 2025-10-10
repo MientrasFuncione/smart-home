@@ -1,5 +1,5 @@
 import pytest
-from src.app.automatizacion import Automatizacion
+from app.dominio.automatizacion import Automatizacion
 
 
 def test_automatizacion_activar():
@@ -50,3 +50,5 @@ def test_automatizacion_inactiva():
     assert automatizacion.nombre == "Apagar todos los dispositivos"
     assert automatizacion.descripcion == "Apaga todos los dispositivos"
     assert automatizacion.estado == "inactiva"
+
+# python -m pytest test/test_automatizacion.py -v

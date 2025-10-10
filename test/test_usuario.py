@@ -1,5 +1,5 @@
 import pytest
-from src.app.usuario import Usuario
+from app.dominio.usuario import Usuario
 
 
 def test_rol_admin_valido():
