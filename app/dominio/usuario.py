@@ -10,7 +10,7 @@ class Usuario:
         self.__rol = rol
 
     def __str__(self):
-        return f"Usuario(id={self.__id}, nombre={self.__nombre}, email={self.__email}, telefono={self.__telefono}, rol={self.__rol})"
+        return f"Id= {self.__id}, Nombre= {self.__nombre}, Email= {self.__email}, Telefono= {self.__telefono}, Rol= {self.__rol}"
 
     def mostrar_datos(self):
         return f"Nombre: {self.nombre}, Email: {self.email}, Teléfono: {self.telefono}, Rol: {self.rol}"
