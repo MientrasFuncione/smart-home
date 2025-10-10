@@ -25,7 +25,7 @@ class GestionUsuario:
             return usuario
 
         return None
-
+    
     def modificar_rol_usuario(self, id_usuario, nuevo_rol):
         if not id_usuario:
             return "El id es necesario para modifcar el rol"
@@ -34,7 +34,7 @@ class GestionUsuario:
 
         self.usuario_dao.update_rol_user(id_usuario, nuevo_rol)
         return "El rol del usuario fue modificado exitosamente."
-
+    
     def listar_usuarios(self):
         print("Lista de usuarios disponibles: ")
         usuarios = self.usuario_dao.get_all()

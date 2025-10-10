@@ -57,7 +57,7 @@ class DispositivoDAO:
                 self.connection.commit()
             except mysql.connector.Error as err:
                 raise Exception(f"Error al intenar actualziar el dispositivo: {err}")
-
+    
     def get_device_by_user(
         self,
         id_usuario,
@@ -71,7 +71,7 @@ class DispositivoDAO:
                 return [Dispositivo(r[0], r[1], r[2], r[3], r[4]) for r in rows]
             except mysql.connector.Error as err:
                 raise Exception(f"Error al consultar los dispositivos: {err}")
-
+   
     def delete(self, id_dispositivo):
         with self.connection.cursor() as cursor:
             try:
