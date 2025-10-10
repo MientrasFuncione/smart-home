@@ -22,5 +22,3 @@ class Automatizacion:
                 # metodo creado en la clase dispositivo
                 dispositivo.apagar_dispostivo()
             print(f"Todos los dispositivos han sido apagados")
-
-        # Se puede agregar más automatizaciones como la de monitoreo de limpieza.
