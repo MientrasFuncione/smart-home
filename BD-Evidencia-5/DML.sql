@@ -1,5 +1,3 @@
-
-
 INSERT INTO Usuario (nombre,email,telefono,contraseña,rol) VALUES
 ('Gadiel','gadiel@gmail.com','3518053537', '123456789', 'admin'),
 ('Ezequiel','ezequiel@gmail.com','3518053538', '123456789', 'usuario'),
@@ -13,15 +11,15 @@ INSERT INTO Usuario (nombre,email,telefono,contraseña,rol) VALUES
 ('Ventura','ventura@gmail.com','3518053546', '123456789', 'usuario');
 
 INSERT INTO Dispositivo (nombre,marca,tipo,estado) VALUES 
-('Aspiradora', 'Gadnic', 'Limpieza', 'apagada'),
-('Luces', 'LED', 'Iluminacion', 'apagada'),
-('Aire Acondicionado', 'Samsung', 'Entretenimiento', 'encendida'),
-('Televisor', 'Samsung', 'Entretenimiento', 'encendida'),
-('Heladera', 'Whirlpool', 'Electrodoméstico', 'encendida'),
-('Lavarropas', 'Drean', 'Electrodoméstico', 'apagada'),
-('Computadora', 'Lenovo', 'Entretenimiento', 'encendida'),
-('persianas', 'Lana', 'Iluminacion', 'apagada'),
-('Parlante', 'Google Nest', 'Entretenimiento', 'apagada');
+('Aspiradora', 'Gadnic', 'Limpieza', 'apagado'),
+('Luces', 'LED', 'Iluminacion', 'apagado'),
+('Aire Acondicionado', 'Samsung', 'Entretenimiento', 'encendido'),
+('Televisor', 'Samsung', 'Entretenimiento', 'encendido'),
+('Heladera', 'Whirlpool', 'Electrodoméstico', 'encendido'),
+('Lavarropas', 'Drean', 'Electrodoméstico', 'apagado'),
+('Computadora', 'Lenovo', 'Entretenimiento', 'encendido'),
+('persianas', 'Lana', 'Iluminacion', 'apagado'),
+('Parlante', 'Google Nest', 'Entretenimiento', 'apagado');
 
 INSERT INTO Automatizacion (nombre, descripcion, estado) VALUES 
 ('encender_dispositivos', 'Enciende todos los dispositivos', 'inactiva'),
@@ -32,21 +30,57 @@ INSERT INTO Automatizacion (nombre, descripcion, estado) VALUES
 ('abrir_persianas', 'Sube automáticamente las persianas', 'inactiva'),
 ('cerrar_persianas', 'Baja automáticamente las persianas', 'inactiva');
 
-INSERT INTO DispositivoUsuario (id_usuario, id_dispositivo) VALUES (5, 8); # Facundo usa persianas
-INSERT INTO DispositivoUsuario (id_usuario, id_dispositivo) VALUES (7, 6); # Carlos usa lavarropas
-# Metodo mas simple
+INSERT INTO DispositivoUsuario (id_usuario, id_dispositivo) VALUES (5, 8); 
+INSERT INTO DispositivoUsuario (id_usuario, id_dispositivo) VALUES (7, 6); 
+
 INSERT INTO DispositivoUsuario (id_usuario, id_dispositivo) VALUES
-(1, 1), # Gadiel tiene Aspiradora
-(5, 2), # Facundo tiene Luces
-(2, 4), # Ezequiel tiene Televiso
-(6, 7), # Perez tiene Computadora
-(3, 2), # Silva contrla las Luces
-(8, 5); # Arnol tiene Heladera
+(1, 1), 
+(5, 2), 
+(2, 4),
+(6, 7),
+(3, 2), 
+(8, 5);
 
 INSERT INTO DispositivoAutomatizacion (id_dispositivo, id_automatizacion) VALUES
-(2, 4), # Luces enciende modo fiesta
-(9, 4), # Parlante enciende modo giesta
-(1, 1), # Aspiradoa se enciende
-(2, 3), #luces Modo Ahorro  
-(1, 2), # aspiradora se aoaga el dispositivo 
-(3, 3); # Aire acondicionado modo ahorro
+(2, 4),
+(9, 4), 
+(1, 1), 
+(2, 3), 
+(1, 2), 
+(3, 3); 
+
+SELECT * FROM Usuario;
+
+SELECT * FROM Dispositivo;
+
+SELECT * FROM Automatizacion;
+
+SELECT * FROM Usuario;
+
+SELECT * FROM Dispositivo;
+
+SELECT * FROM Automatizacion;
+
+SELECT * FROM DispositivoUsuario;    
+
+SELECT * FROM DispositivoAutomatizacion;
+
+SELECT nombre
+FROM Usuario;
+
+SELECT nombre, rol
+FROM Usuario
+WHERE nombre = 'Facundo'; # Selecciona El rol de "facudno"
+
+SELECT id_usuario, nombre, rol
+FROM Usuario
+WHERE id_usuario BETWEEN 3 AND 7; # Seleccionar usuarios cuyos ID están entre 3 y 7 (Silva, Monteabaro, Facundo, Perez, Carlos)
+
+UPDATE Usuario
+SET nombre = 'Gabriela', email = 'gabriela.a@ejemplo.com'
+WHERE id_usuario = 9; # Actualiza el registro del Usuario 9 (Gabriel)
+
+UPDATE Dispositivo
+SET marca = 'Dyson', tipo = 'Alta Gama'
+WHERE id_dispositivo = 1; # Cambiar la marca y el tipo de la Aspiradora (ID 1)
+
