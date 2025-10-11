@@ -1,9 +1,10 @@
 import mysql.connector
 from app.conn.db_conn import DBConnection
 from app.dominio.usuario import Usuario
+from .interfaces.i_usuario_dao import IUsuarioDAO
 
 
-class UsuarioDAO:
+class UsuarioDAO(IUsuarioDAO):
     def __init__(self):
         self.connection = DBConnection.get_connection()
 
