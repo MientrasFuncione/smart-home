@@ -27,6 +27,7 @@ También dispondremos del directorio **test**, que contendrá las **pruebas unit
 El archivo **.gitignore** permitirá indicarle a Git qué archivos o directorios no deben ser rastreados, como por ejemplo el archivo **.env**, que puede contener información sensible sobre la base de datos o configuraciones locales.
 
 Finalmente, el archivo principal **main.py** será el punto de entrada del programa: allí se integrarán todos los módulos y se mostrará un **menú en consola**, desde el cual podremos visualizar y manipular la información de forma práctica.
+
 ---
 
 ### Conexion a MySQL
@@ -67,6 +68,7 @@ La clase DBConnection tiene un método, definido como método estático get_conn
 En caso de que la conexión sea exitosa, el método devuelve un objeto de conexión de MySQL, que puede ser utilizado para ejecutar consultas mediante un cursor.
 
 Si ocurre un error, como credenciales incorrectas o problemas de acceso, se imprime un mensaje de error en la consola y se retorna None.
+
 ---
 
 - **Dispositivo**
