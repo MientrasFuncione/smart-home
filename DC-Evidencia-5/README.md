@@ -1,53 +1,55 @@
 # Modulo Programador - ( Tercera Instancia )
 
-<img width="1407" height="577" alt="Image" src="https://github.com/user-attachments/assets/000557ac-c784-4317-b77c-464db6061359" />
+![Image](https://github.com/user-attachments/assets/b0e031df-5a4d-45e1-a7d6-bb44d33d5f00)
 
 ### Introducción
 
-A partir de la instancia anterior, donde utilizabamos un programacion estructura, en esta instancia tenemos como objetivo lograr implementa una Programacion Orientada a Objetos, aplicando los conceptos fundamentales como abstracción, encapsulamiento, herencia, agregación, etc.
+A partir de la instancia anterior, donde utilizabamos un programacion estructura, en  esta instancia tenemos como objetivo lograr implementa una Programacion Orientada a Objetos, aplicando los conceptos fundamentales como abstracción, encapsulamiento, herencia, agregación, etc.
 
 Con respecto al modelo entidad relacion tuvimos cambios debido a la inconsistencia del mismo, donde decimos solo implementar las Entidades Usuario, Dispositivo y Automatización.
 
-Para ello decidimos cambiar las automatizacion a Luces Inteligentes, donde podemos agregar luces de diferentes lugares del hogar, donde cada usuario puede tener control de todas las luces y tambien sus respectivas automatizaciones.
-
-Esta decision viene ya que la nueva implementación, nos permite generar automatizaciones mas generales como la de encender todas las luces cuando el usuario llega a casa, tener diferentes estados (”tenue”, “calida”,”fria”) y mejorar la experiencia de usuario, generando asi metodos de encendido y apagado mas especificos.
-
----
-
-### Diagrama de Clases
-
-En el diagrama de clases presentado podemos visualizar tres tablas las cuales nos ayudan a conceptualizar, analizar y comunicar la estructura del sistema de manera efecticva
-
-Cabe aclarar que el diagrama de UML puede ser mejorado integrando integrando nuevas tablas como dispositivos especificos como “Luces” donde busquemos un comportamiento diferente al de los demas objetos como un prendido automatico a determinada hora.
-
-En este caso no lo vimos necesario, debido a que la automatizacion establecida anteriormente fue modificada, por una de uso general.
-
-La automatizacion permite activar automaticamente todos los dispositivos conectados al mismo tiempo, por esta razón no fue necesario implementar mas tablas.
+A partir de esta decisión, se simplifica el modelo y se enfoca en las entidades principales del sistema, evitando redundancias e inconsistencias. Esto permite que cada clase tenga una responsabilidad clara, facilitando la aplicación de los conceptos de la Programación Orientada a Objetos como **abstracción**, al modelar solo lo esencial de cada entidad; **encapsulamiento**, al proteger los datos y exponer solo los métodos necesarios; **herencia**, si en el futuro se crean clases derivadas; y **agregación**, para reflejar las relaciones entre Usuario, Dispositivo y Automatización. Esta estructura hace que el código sea más **modular, escalable y fácil de mantener**, en comparación con la programación estructurada anterior.
 
 ---
 
 ### Principios Aplicados
 
-- **Agregación**
+- **Asociación**
 
-Una clase es una abstracción de un objeto del mundo real, donde seleccionamos solo lo relevante y ocultamos detalles inncesarios.
+Una relación de asociación representa un vínculo entre dos o más clases que colaboran entre sí.
 
-Nos permite enfocarnos en que hace un objeto, sin tener en cuenta su comportamiento interno.
+En este caso, las clases Usuario y Dispositivo cumplen con esta característica, estableciendo una asociación bidireccional. Lo mismo ocurre entre Dispositivo y Automatización.
 
-En este caso Dispositivo, Usuario y Automatización.
+Podemos entender que el Usuario conoce al Dispositivo, y según la multiplicidad, un Usuario puede tener cero o más Dispositivos, mientras que un Dispositivo puede ser controlado por varios Usuarios.
+
+La asociación no implica propiedad ni dependencia, sino simplemente una interacción funcional o lógica entre las clases dentro del sistema.
 
 - **Encapsulamiento**
 
-Al declarar los atributos como privados evita que otros objetos o clases modifiquen directamente estos atributos.
+Al declarar los atributos como **privados**, se evita que otras clases u objetos **accedan o modifiquen directamente** dichos valores.
 
-En la clase Usuario podes ver los atributos contraseña como atributo privado y rol como atributo protegido. En el caso de constraseña, se establece como privado para que no se pueda acceder a el desde otras partes del código. A esto sumarle la prevención de modificación desde otras clases.
+En la clase **Usuario**, el atributo **contraseña** se define como **privado**, lo que impide su acceso directo desde fuera de la clase. Esto ayuda a **proteger la información sensible** y **evitar modificaciones indebidas** desde otras partes del código.
 
-- Agregación
+Por otro lado, el atributo **rol** se declara como **protegido**, permitiendo que solo la propia clase y sus **subclases** puedan accederlo, pero no cualquier objeto externo.
 
-La agregación representa una relación “tiene un”, donde una clase contiente o agrupa a otras clases, tener en cuenta que las partes pueden existir independientemente de todo.
-En este caso Usuario existe independientemente de si existe Dispositivo, cosa que como nuestra relacion es n:m un Dispositivo sigue existiendo idependiente del usuario, ya que puede ser accedido por otros usuarios.
+En conjunto, esta práctica promueve el principio de **encapsulamiento**, fundamental para mantener la **seguridad y consistencia** de los datos dentro del sistema.
 
-Lo mismo pasa con la Automatizacion, al ser una automatizacion que se aplica a todos los dispositivos, su existencia no depende de un dispositivo y viceversa.
+- **Agregación**
+
+La agregación representa una relación “tiene un”, donde una clase contiene o agrupa a otras clases.
+
+Es importante tener en cuenta que las partes pueden existir independientemente del todo.
+
+En este caso, aplicamos agregación desde los respectivos gestores, ya que forman parte del dominio del sistema, pero las clases que administran no dependen directamente de ellos para existir.
+
+Por ejemplo, la clase GestiónUsuario se encarga de administrar varios Usuario, pero si se elimina GestiónUsuario, los usuarios seguirán existiendo en la base de datos.
+
+Lo mismo sucede con GestiónDispositivo, que gestiona varios Dispositivo, los cuales también pueden existir de forma independiente
+
+- **Principio de responsabilidad única**
+
+El principio de responsabilidad única establece que cada clase debe tener una única funcion o motivo dentro del sistema. Encargandose asi de solo una tarea o proposito.
+En este caso los dominios Usuario, Dispositivo, Automatización, se encargan de modelar los atributos y metodos individuales. Las clases de gestión se encargar exclusivamente de administrar los usuarios, los dispositivos y las automatizaciones, de esta forma facilita el mantenimiento y la escalabilidad, y sobre todo la lectura del código. 
 
 ---
 
