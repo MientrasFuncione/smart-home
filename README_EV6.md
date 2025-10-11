@@ -399,3 +399,11 @@ Dentro de nuestro dao, generamos el archivo **usuario_dao.py,** ahi nos encargar
 - El método eliminar_dispositivo permite al admin borrar un dispositivo de la base de datos, utilizando el método delete implementado en el Dispositivo DAO.
 
 ---
+
+### Conclusion
+
+El desarrollo de este proyecto de gestión de dispositivos inteligentes y automatizaciones nos permitió aplicar de manera práctica los conocimientos adquiridos en programación orientada a objetos, manejo de bases de datos y diseño de aplicaciones con distintos niveles de acceso según roles de usuario. Durante el trabajo, se implementaron funcionalidades clave como el registro y autenticación de usuarios, la gestión completa de dispositivos, la asignación de estos a diferentes usuarios y la creación de automatizaciones programadas que permiten encender o apagar dispositivos en horarios específicos.
+
+El proyecto se desarrolló teniendo en cuenta la persistencia de datos mediante MySQL y la separación de responsabilidades mediante el patrón DAO, asegurando así la mantenibilidad y escalabilidad de la aplicación. Además, se buscó ofrecer una experiencia cercana a un sistema de smart home real, donde los usuarios pueden controlar y monitorear los dispositivos de forma centralizada y los administradores tienen la capacidad de gestionar recursos de manera eficiente.
+
+En este contexto, los autores Gadiel y Facundo asumimos la planificación, diseño y desarrollo integral de la aplicación, enfrentando desafíos relacionados con la sincronización de estados entre la base de datos y la lógica de automatización, así como la correcta gestión de permisos según roles de usuario. La realización de este proyecto consolidó nuestras habilidades técnicas y de trabajo en equipo, demostrando nuestra capacidad de llevar un proyecto desde la conceptualización hasta su implementación funcional.
